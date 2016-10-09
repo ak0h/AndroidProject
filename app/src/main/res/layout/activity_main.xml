@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.naval.navalmionina.MainActivity"
+    android:background="@android:color/holo_green_dark">
+    <TextView
+        android:id="@+id/widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mionina_app_s" />
+
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:onClick="startService"
+        android:text="Start Service"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:onClick="stopService"
+        android:text="Stop Service"
+        android:layout_height="60dp"
+        android:layout_width="160dp"
+        android:layout_alignTop="@+id/buttonStart"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/effacer_fichier"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/delete"
+        android:layout_below="@+id/buttonStop"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:text="Lire Fichier"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:id="@+id/read"
+        android:layout_alignTop="@+id/delete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/seekBar"
+        android:max="600000"
+        android:progress="60000"
+        android:layout_below="@+id/delete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarSize="20dp" />
+
+
+</RelativeLayout>
